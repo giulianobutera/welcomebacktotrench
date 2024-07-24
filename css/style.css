@@ -1,0 +1,131 @@
+/* Elementos */
+html {
+	margin: 0;
+	padding: 0;
+    height: 100%;
+}
+
+body {
+	background: #E03D2E;
+	margin: 0; 
+	padding: 0;
+    height: 100%;
+    font-family: "Martian Mono", monospace;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-variation-settings: "wdth" 100;
+    color: #FFD900;
+}
+
+header {
+    display: flex;
+    justify-content: center;
+}
+
+header ul {
+    padding: 0;
+    margin: 1em;
+}
+
+header ul li {
+    display: inline-block;
+}
+
+header ul li a {
+    text-decoration: none;
+    color: #FFD900;
+    text-transform: uppercase;
+    padding: 1em;
+}
+
+header ul li a:hover {
+    text-decoration: underline;
+}
+
+/* No funciona ya que cuando cambia html se pierde referencia */
+/* header ul li a:active {
+    font-optical-sizing: auto;
+    font-weight: 800;
+    font-style: normal;
+    font-variation-settings: "wdth" 100;
+} */
+
+/* Se utiliza ya que la clase de arriba no funciona */
+.active {
+    font-optical-sizing: auto;
+    font-weight: 800;
+    font-style: normal;
+    font-variation-settings: "wdth" 100;
+}
+
+main {
+    height: 100%;
+    background-color: #231F20;
+}
+
+footer {
+    background: url('../assets/background_footer.png') no-repeat top left;
+    background-size: cover;
+    margin: 0; 
+	padding: 1em;
+    display: flex;
+    text-align: center;
+}
+
+/* Clases */
+.index-main-image {
+    background: url('../assets/background_inicio.jpg') no-repeat top left;
+    background-size: cover;
+}
+
+.index-section {
+    display: flex;
+    justify-content: center;
+    height: 100%;
+    margin: 0em 1em 0em 1em;
+}
+
+.index-div-title {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.index-title {
+    text-transform: uppercase;
+    font-size: 4em;
+    margin: 0;
+    padding: 0;
+}
+
+.clancy-torchbearer-image {
+    margin-top: 1em;
+}
+
+.section-title {
+    padding: 2em;
+}
+
+.title {
+    margin: 0;
+    padding: 0;
+    text-transform: uppercase;
+}
+
+.section-card {
+    display: flex;
+    justify-content: center;
+    margin: 0 1em 0 2em;
+}
+
+.card { 
+    padding: 1em;
+    margin-right: 1em;
+    margin-bottom: 1em;
+    background-color: #E03D2E;
+}
+
+.card-title {
+    margin-top: 0;
+}
