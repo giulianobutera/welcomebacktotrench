@@ -1,5 +1,15 @@
 /* Elementos */
+html {
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
 body {
+    max-width: 100%;
+    overflow-x: hidden;
+    display: grid;
+    grid-template-rows: auto 1fr auto; /* filas para el header, main y footer */
+    min-height: 100vh;
 	background: #E03D2E;
     font-family: "Martian Mono", monospace;
     font-optical-sizing: auto;
@@ -7,9 +17,6 @@ body {
     font-style: normal;
     font-variation-settings: "wdth" 100;
     color: #FFD900;
-    display: grid;
-    grid-template-rows: auto 1fr auto; /* filas para el header, main y footer */
-    min-height: 100vh;
 }
 
 header {
@@ -111,7 +118,7 @@ p {
 
 .index-title {
     text-transform: uppercase;
-    font-size: 5em;
+    font-size: 3em;
     margin: 0;
     padding: 0;
 }
@@ -148,6 +155,20 @@ p {
 }
 
 /* Media querys */
+/* Estilos para pantallas mayores a 345px (xs) */
+@media screen and (min-width: 345px) {
+    .index-title {
+        font-size: 4em;
+    }
+}
+
+/* Estilos para pantallas mayores a 576px (sm) */
+@media screen and (min-width: 576px) {
+    .index-title {
+        font-size: 5em;
+    }
+}
+
 /* Estilos para pantallas mayores a 768px (md) */
 @media screen and (min-width: 768px) {
     body {
