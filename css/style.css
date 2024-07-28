@@ -34,6 +34,7 @@ header ul {
 
 header ul li {
     list-style: none;
+    margin: 1em;
 }
 
 header ul li a {
@@ -41,6 +42,7 @@ header ul li a {
     color: #FFD900;
     text-transform: uppercase;
     padding: 1em;
+    font-size: 2em;
 }
 
 header ul li a:hover {
@@ -74,6 +76,12 @@ p {
     display: flex;
     justify-content: center;
     background: #E03D2E;
+}
+
+/* Se quita la animación de bootstrap ya que se rompe */
+.collapsing {
+    -webkit-transition: none;
+    transition: none;
 }
 
 .navbar-container {
@@ -138,20 +146,29 @@ p {
 }
 
 .section-card {
-    display: flex;
-    justify-content: center;
-    margin: 0 1em 0 2em;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 1em;
+    margin: 0 1em 1em 1em;
 }
 
-.card { 
+.custom-card { 
+    grid-column: span 1;
     padding: 1em;
-    margin-right: 1em;
-    margin-bottom: 1em;
     background-color: #E03D2E;
+}
+
+.custom-card ul {
+    margin: 1em 0 0 0;
+    padding: 0 0 0 1em;
 }
 
 .card-title {
     margin-top: 0;
+}
+
+.card-info {
+    margin-top: 0.5em;
 }
 
 /* Media querys */
@@ -179,6 +196,14 @@ p {
         flex-direction: row;
     }
 
+    header ul li {
+        margin: 0;
+    }
+
+    header ul li a {
+        font-size: 1em;
+    }
+
     .custom-navbar {
         padding: 0;
     }
@@ -194,5 +219,13 @@ p {
         padding-top: 1em;
         display: block;
         height: calc(100vh - 110px);
+    }
+
+    .section-card {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .expand {
+        grid-column: span 2;
     }
 }
