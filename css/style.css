@@ -71,6 +71,14 @@ p {
     align-content: center;
 }
 
+p a:hover {
+    color: #231F20;
+}
+
+a {
+    color: #FFD900;
+}
+
 /* Clases */
 .custom-navbar {
     display: flex;
