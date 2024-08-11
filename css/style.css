@@ -177,6 +177,7 @@ a {
 
 .card-info {
     margin-top: 0.5em;
+    overflow-wrap: anywhere;
 }
 
 /* Media querys */
