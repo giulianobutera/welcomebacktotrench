@@ -1,3 +1,77 @@
-test {
-    background-color: aliceblue;
+@import "../variables/colors";
+
+/* Estilos sobre elementos del navbar */
+header {
+    background: $page-background-color;
+    align-content: center;
+    ul {
+        padding: 0;
+        margin: 1em;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        li {
+            list-style: none;
+            margin: 1em;
+            a {
+                text-decoration: none;
+                color: $text-main-color;
+                text-transform: uppercase;
+                padding: 1em;
+                font-size: 2em;
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
+    @media screen and (min-width: $breakpoint-md) {
+        ul {
+            flex-direction: row;
+            li {
+                margin: 0;
+                a {
+                    font-size: 1em;
+                }
+            }
+        }
+    }
+}
+
+/* Estilos sobre clases del navbar */
+.custom-navbar {
+    display: flex;
+    justify-content: center;
+    background: $page-background-color;
+    @media screen and (min-width: $breakpoint-md) {
+        padding: 0;
+    }
+}
+
+.collapsing {
+    -webkit-transition: none;
+    transition: none;
+}
+
+.navbar-container {
+    display: flex;
+    justify-content: center;
+    height: calc(100vh - 56px);
+    @media screen and (min-width: $breakpoint-md) {
+        height: 100%;
+    }
+}
+
+.navbar-button {
+    color: $text-main-color;
+    border: none;
+    box-shadow: none;
+    font-size: 2em;
+    &:focus {
+        box-shadow: none;
+    }
+}
+
+.active-link {
+    font-weight: 800;
 }

@@ -1,0 +1,45 @@
+@import "../variables/colors";
+@import "../variables/breakpoints";
+
+// /* Estilos sobre elementos del index */
+/* Estilos sobre clases del index */
+.index-main-image {
+    background: url('../assets/background_inicio.jpg') no-repeat top left;
+    background-size: cover;
+    height: 100%;
+}
+
+.index-section {
+    display: flex;
+    justify-content: center;
+    height: 100%;
+    margin: 0em 1em 0em 1em;
+}
+
+.index-div-title {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.index-title {
+    text-transform: uppercase;
+    font-size: 3em;
+    margin: 0;
+    padding: 0;
+    @media screen and (min-width: $breakpoint-xs) {
+        font-size: 4em;
+    }
+    @media screen and (min-width: $breakpoint-sm) {
+        font-size: 5em;
+    }
+}
+
+.clancy-torchbearer-image {
+    display: none;
+    @media screen and (min-width: $breakpoint-lg) {
+        padding-top: 1em;
+        display: block;
+        height: calc(100vh - 110px);
+    }
+}

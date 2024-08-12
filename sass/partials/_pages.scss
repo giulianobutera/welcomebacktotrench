@@ -1,3 +1,58 @@
-test {
-    background-color: aliceblue;
+@import "../variables/breakpoints";
+
+/* Estilos sobre elementos de las paginas */
+p {
+    margin: 0;
+    align-content: center;
+    a {
+        &:hover {
+            color: $background-color;
+        }
+    }
+}
+
+/* Estilos sobre clases de las paginas */
+.section-title {
+    padding: 2em;
+}
+
+.title {
+    margin: 0;
+    padding: 0;
+    text-transform: uppercase;
+}
+
+.section-card {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 1em;
+    margin: 0 1em 1em 1em;
+    @media screen and (min-width: $breakpoint-lg) {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+.custom-card { 
+    grid-column: span 1;
+    padding: 1em;
+    background-color: $page-background-color;
+    ul {
+        margin: 1em 0 0 0;
+        padding: 0 0 0 1em;
+    }
+}
+
+.card-title {
+    margin-top: 0;
+}
+
+.card-info {
+    margin-top: 0.5em;
+    overflow-wrap: anywhere;
+}
+
+@media screen and (min-width: $breakpoint-lg) {
+    .expand {
+        grid-column: span 2;
+    }
 }
