@@ -11,7 +11,7 @@ body {
     max-width: 100%;
     overflow-x: hidden;
     display: grid;
-    grid-template-rows: auto 1fr auto; /* filas para el header, main y footer */
+    grid-template-rows: 60px 1fr 50px;
     min-height: 100dvh;
 	background: $page-background-color;
     font-family: "Martian Mono", monospace;
@@ -20,9 +20,6 @@ body {
     font-style: normal;
     font-variation-settings: "wdth" 100;
     color: $text-main-color;
-    @include adapt-to(md) {
-        grid-template-rows: 60px 1fr 50px;
-    }
 }
 
 main {

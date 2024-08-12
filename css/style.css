@@ -8,7 +8,7 @@ body {
   max-width: 100%;
   overflow-x: hidden;
   display: grid;
-  grid-template-rows: auto 1fr auto; /* filas para el header, main y footer */
+  grid-template-rows: 60px 1fr 50px;
   min-height: 100dvh;
   background: #E03D2E;
   font-family: "Martian Mono", monospace;
@@ -17,11 +17,6 @@ body {
   font-style: normal;
   font-variation-settings: "wdth" 100;
   color: #FFD900;
-}
-@media screen and (min-width: 768px) {
-  body {
-    grid-template-rows: 60px 1fr 50px;
-  }
 }
 
 main {
@@ -47,6 +42,7 @@ a {
 
 /* Estilos sobre elementos del navbar */
 header {
+  height: 100%;
   background: #E03D2E;
   align-content: center;
 }
@@ -85,13 +81,14 @@ header ul li a:hover {
 
 /* Estilos sobre clases del navbar */
 .custom-navbar {
-  display: flex;
-  justify-content: center;
   background: #E03D2E;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
 }
 @media screen and (min-width: 768px) {
   .custom-navbar {
-    padding: 0;
+    height: 60px;
   }
 }
 
@@ -109,6 +106,9 @@ header ul li a:hover {
   .navbar-container {
     height: 100%;
   }
+}
+.navbar-container.show {
+  transition: all 0.3s;
 }
 
 .navbar-button {

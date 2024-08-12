@@ -3,6 +3,7 @@
 
 /* Estilos sobre elementos del navbar */
 header {
+    height: 100%;
     background: $page-background-color;
     align-content: center;
     ul {
@@ -41,11 +42,12 @@ header {
 
 /* Estilos sobre clases del navbar */
 .custom-navbar {
-    display: flex;
-    justify-content: center;
     background: $page-background-color;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
     @include adapt-to(md) {
-        padding: 0;
+        height: 60px;
     }
 }
 
@@ -60,6 +62,9 @@ header {
     height: calc(100vh - 56px);
     @include adapt-to(md) {
         height: 100%;
+    }
+    &.show {
+        transition: all 0.3s;
     }
 }
 
