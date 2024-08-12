@@ -1,4 +1,4 @@
-@import "../variables/breakpoints";
+@import "../utils/mixins";
 
 /* Estilos sobre elementos de las paginas */
 p {
@@ -27,7 +27,7 @@ p {
     grid-template-columns: repeat(1, 1fr);
     gap: 1em;
     margin: 0 1em 1em 1em;
-    @media screen and (min-width: $breakpoint-lg) {
+    @include adapt-to(lg) {
         grid-template-columns: repeat(2, 1fr);
     }
 }
@@ -51,7 +51,7 @@ p {
     overflow-wrap: anywhere;
 }
 
-@media screen and (min-width: $breakpoint-lg) {
+@include adapt-to(lg) {
     .expand {
         grid-column: span 2;
     }
