@@ -19,10 +19,13 @@ header {
                 text-decoration: none;
                 color: $text-main-color;
                 text-transform: uppercase;
-                padding: 1em;
                 font-size: 2em;
+                text-wrap: nowrap;
                 &:hover {
                     text-decoration: underline;
+                }
+                @include adapt-to(md) {
+                    padding: 1em;
                 }
             }
         }
