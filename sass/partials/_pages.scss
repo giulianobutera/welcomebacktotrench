@@ -99,6 +99,16 @@ p {
     }
 }
 
+.card-images-history {
+    display: none;
+    @include adapt-to(md) {
+        margin-top: 0.5em;
+        max-height: 250px;
+        display: flex;
+        justify-content: space-evenly;
+    }
+}
+
 .image-container {
     text-align: center;
     margin: 0;
@@ -129,6 +139,24 @@ p {
     &:hover figcaption {
         opacity: 1;
     }
+}
+
+.custom-carousel {
+    margin-top: 0.5em;
+    @include adapt-to(md) {
+        display: none;
+    }
+}
+
+.history-img {
+    max-height: 250px;
+}
+
+.carousel-item-container {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    max-height: 250px;
 }
 
 @include adapt-to(lg) {
